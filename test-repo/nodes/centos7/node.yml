@@ -1,0 +1,8 @@
+node_map:
+  centos7:
+    hosts:
+      - 192.168.122.101
+      - 192.168.122.102
+      - 192.168.122.103
+    fabruns:
+      - benchmark/bootstrap
