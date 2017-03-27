@@ -12,14 +12,35 @@ class Benchmark(SimpleBase):
                 'epel-release',
                 'siege',
                 'httpd',
+                'nginx',
                 'at',
                 'perf',
+                'sysstat',  # iostat
+                'mtr',
+                'traceroute',
+                'strace',
+                'ltrace',
+                'blktrace',
+                'tcpdump',
+                {'name': 'nicstat', 'path': 'http://packages.psychotic.ninja/7/base/x86_64/RPMS//nicstat-1.95-3.el7.psychotic.x86_64.rpm'},  # noqa
+                'iptraf-ng',
+                'iotop',
+                'tiptop',
+                'collectl',
+                'atop',
+                'dstat',
+                {'name': 'mysql-workbench-community', 'path': 'https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community-6.3.9-1.el7.x86_64.rpm'},  # noqa
+                'mariadb-server',
+                'systemtap',
+                'numactl',
+                'ethtool',
             ],
         }
 
         self.services = {
             'CentOS Linux 7.*': [
                 'httpd',
+                'mariadb',
                 'atd',
             ],
         }
