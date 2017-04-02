@@ -34,6 +34,8 @@ class Benchmark(SimpleBase):
                 'systemtap',
                 'numactl',
                 'ethtool',
+                'iperf3',
+                'fio',
             ],
         }
 
