@@ -10,8 +10,12 @@ class Benchmark(SimpleBase):
         self.packages = {
             'CentOS Linux 7.*': [
                 'epel-release',
+                'wget',
+                'python-devel',
+                'pip',
                 'siege',
                 'httpd',
+                'haproxy',
                 'nginx',
                 'at',
                 'perf',
@@ -41,7 +45,7 @@ class Benchmark(SimpleBase):
 
         self.services = {
             'CentOS Linux 7.*': [
-                'httpd',
+                'nginx',
                 'mariadb',
                 'atd',
             ],

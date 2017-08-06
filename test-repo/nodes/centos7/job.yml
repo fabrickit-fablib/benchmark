@@ -18,49 +18,36 @@ job:
 container1:
   provider: libvirt
   libvirt:
-    gateway: 192.168.122.1
+    gateway: 172.16.100.1
     netmask: 255.255.255.0
   libvirt_vms:
     - name: benchmark-1
-      ip: 192.168.122.101
+      ports:
+        - {ip: 172.16.100.131, queues: 1, type: virtio}
+      nameservers:
+        - 172.16.100.1
       template: user-data_centos7
-      src_image: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1511.qcow2c.xz
+      src_image: https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1703.qcow2.xz
       vcpus: 1
       ram: 4096
       disk_size: 40
     - name: benchmark-2
-      ip: 192.168.122.102
+      ports:
+        - {ip: 172.16.100.132, queues: 1, type: virtio}
+      nameservers:
+        - 172.16.100.1
       template: user-data_centos7
-      src_image: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1511.qcow2c.xz
+      src_image: https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1703.qcow2.xz
       vcpus: 1
       ram: 4096
       disk_size: 40
     - name: benchmark-3
-      ip: 192.168.122.103
+      ports:
+        - {ip: 172.16.100.133, queues: 1, type: virtio}
+      nameservers:
+        - 172.16.100.1
       template: user-data_centos7
-      src_image: http://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1511.qcow2c.xz
+      src_image: https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1703.qcow2.xz
       vcpus: 1
       ram: 4096
       disk_size: 40
-  iptables:
-    - ip: 192.168.122.101
-      ports:
-        - [443, 41443]
-        - [80, 41080]
-        - [3306, 41306]
-        - [9999, 41999]
-        - [3000, 41300]
-    - ip: 192.168.122.102
-      ports:
-        - [443, 42443]
-        - [80, 42080]
-        - [3306, 42306]
-        - [9999, 42999]
-        - [3000, 42300]
-    - ip: 192.168.122.103
-      ports:
-        - [443, 43443]
-        - [80, 43080]
-        - [3306, 43306]
-        - [9999, 43999]
-        - [3000, 43300]
