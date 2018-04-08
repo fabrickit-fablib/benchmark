@@ -2,7 +2,6 @@
 
 import copy
 import json
-import re
 from fabkit import *  # noqa
 from fablib.base import SimpleBase
 

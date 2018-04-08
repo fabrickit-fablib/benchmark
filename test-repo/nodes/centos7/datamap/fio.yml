@@ -1,32 +1,32 @@
 data:
 - '!!host': benchmark-1.example.com
-  randread_4k_qd1_j1: {cpu_ctx: 37493, cpu_sys: 5.583333, cpu_usr: 1.335, read_iops: 624.606257,
-    read_latency: 3358720, write_iops: 0.0, write_latency: 0}
-  randread_4k_qd32_j1: {cpu_ctx: 14001, cpu_sys: 1.603984, cpu_usr: 0.346447, read_iops: 408.134712,
-    read_latency: 204472320, write_iops: 0.0, write_latency: 0}
-  randread_4k_qd32_j8: {cpu_ctx: 1010, cpu_sys: 0.184929, cpu_usr: 0.039985, read_iops: 244.168999,
-    read_latency: 265289728, write_iops: 0.0, write_latency: 0}
-  randread_4k_qd8_j1: {cpu_ctx: 64317, cpu_sys: 7.061314, cpu_usr: 2.421546, read_iops: 1072.361843,
-    read_latency: 106430464, write_iops: 0.0, write_latency: 0}
-  randread_512_qd1_j1: {cpu_ctx: 68875, cpu_sys: 7.018333, cpu_usr: 1.808333, read_iops: 1113.014783,
-    read_latency: 1499136, write_iops: 0.0, write_latency: 0}
-  randread_512k_qd1_j1: {cpu_ctx: 18573, cpu_sys: 4.243767, cpu_usr: 0.198198, read_iops: 309.133606,
-    read_latency: 102236160, write_iops: 0.0, write_latency: 0}
-  randwrite_4k_qd1_j1: {cpu_ctx: 24142, cpu_sys: 3.973333, cpu_usr: 0.715, read_iops: 0.0,
-    read_latency: 0, write_iops: 401.959967, write_latency: 9371648}
-  randwrite_4k_qd32_j1: {cpu_ctx: 3915, cpu_sys: 0.331313, cpu_usr: 0.196457, read_iops: 0.0,
-    read_latency: 0, write_iops: 378.223591, write_latency: 158334976}
-  randwrite_4k_qd32_j8: {cpu_ctx: 1715, cpu_sys: 0.274808, cpu_usr: 0.09993, read_iops: 0.0,
-    read_latency: 0, write_iops: 416.767983, write_latency: 106430464}
-  randwrite_4k_qd8_j1: {cpu_ctx: 101990, cpu_sys: 10.05225, cpu_usr: 3.466121, read_iops: 0.0,
-    read_latency: 0, write_iops: 1698.670483, write_latency: 103284736}
-  randwrite_512_qd1_j1: {cpu_ctx: 187938, cpu_sys: 21.813333, cpu_usr: 1.123333, read_iops: 0.0,
-    read_latency: 0, write_iops: 1575.340411, write_latency: 798720}
-  randwrite_512k_qd1_j1: {cpu_ctx: 15774, cpu_sys: 4.166667, cpu_usr: 0.345, read_iops: 0.0,
-    read_latency: 0, write_iops: 262.0123, write_latency: 102236160}
-  read_1m_qd1_j1: {cpu_ctx: 11817, cpu_sys: 2.906822, cpu_usr: 0.139767, read_iops: 196.252974,
-    read_latency: 103284736, write_iops: 0.0, write_latency: 0}
-  write_1m_qd1_j1: {cpu_ctx: 15159, cpu_sys: 4.348333, cpu_usr: 1.0, read_iops: 0.0,
-    read_latency: 0, write_iops: 251.529141, write_latency: 25034752}
+  randread_4k_qd1_j1: {cpu_ctx: 124173, cpu_sys: 17.776667, cpu_usr: 0.786667, read_iops: 2069.432176,
+    read_latency: 700416, write_iops: 0.0, write_latency: 0}
+  randread_4k_qd32_j1: {cpu_ctx: 133938, cpu_sys: 15.544447, cpu_usr: 4.530534, read_iops: 2232.438017,
+    read_latency: 29491200, write_iops: 0.0, write_latency: 0}
+  randread_4k_qd32_j8: {cpu_ctx: 1253, cpu_sys: 0.244682, cpu_usr: 0.019974, read_iops: 262.970422,
+    read_latency: 177209344, write_iops: 0.0, write_latency: 0}
+  randread_4k_qd8_j1: {cpu_ctx: 127628, cpu_sys: 14.370948, cpu_usr: 4.644768, read_iops: 2127.791481,
+    read_latency: 7897088, write_iops: 0.0, write_latency: 0}
+  randread_512_qd1_j1: {cpu_ctx: 126964, cpu_sys: 18.043333, cpu_usr: 0.733333, read_iops: 2115.931401,
+    read_latency: 675840, write_iops: 0.0, write_latency: 0}
+  randread_512k_qd1_j1: {cpu_ctx: 32772, cpu_sys: 10.086101, cpu_usr: 0.350367, read_iops: 610.67109,
+    read_latency: 2113536, write_iops: 0.0, write_latency: 0}
+  randwrite_4k_qd1_j1: {cpu_ctx: 195730, cpu_sys: 25.145, cpu_usr: 0.793333, read_iops: 0.0,
+    read_latency: 0, write_iops: 3261.995633, write_latency: 765952}
+  randwrite_4k_qd32_j1: {cpu_ctx: 217863, cpu_sys: 19.838691, cpu_usr: 8.971988, read_iops: 0.0,
+    read_latency: 0, write_iops: 3634.044326, write_latency: 18743296}
+  randwrite_4k_qd32_j8: {cpu_ctx: 1578, cpu_sys: 0.251579, cpu_usr: 0.096633, read_iops: 0.0,
+    read_latency: 0, write_iops: 396.121422, write_latency: 173015040}
+  randwrite_4k_qd8_j1: {cpu_ctx: 203217, cpu_sys: 19.771008, cpu_usr: 7.149762, read_iops: 0.0,
+    read_latency: 0, write_iops: 3389.963835, write_latency: 5734400}
+  randwrite_512_qd1_j1: {cpu_ctx: 201754, cpu_sys: 25.95, cpu_usr: 0.828333, read_iops: 0.0,
+    read_latency: 0, write_iops: 3362.460626, write_latency: 724992}
+  randwrite_512k_qd1_j1: {cpu_ctx: 21499, cpu_sys: 7.38321, cpu_usr: 1.079982, read_iops: 0.0,
+    read_latency: 0, write_iops: 358.238059, write_latency: 7831552}
+  read_1m_qd1_j1: {cpu_ctx: 16394, cpu_sys: 6.557417, cpu_usr: 0.243761, read_iops: 395.414505,
+    read_latency: 3588096, write_iops: 0.0, write_latency: 0}
+  write_1m_qd1_j1: {cpu_ctx: 16388, cpu_sys: 7.256253, cpu_usr: 0.943239, read_iops: 0.0,
+    read_latency: 0, write_iops: 304.20736, write_latency: 19267584}
 name: fio
 type: multi-table
