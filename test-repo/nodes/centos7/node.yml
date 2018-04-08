@@ -2,7 +2,5 @@ node_map:
   centos7:
     hosts:
       - benchmark-1.example.com
-      - benchmark-2.example.com
-      - benchmark-3.example.com
     fabruns:
-      - benchmark/bootstrap
+      - benchmark/benchmark

@@ -12,7 +12,6 @@ class Benchmark(SimpleBase):
                 'epel-release',
                 'wget',
                 'python-devel',
-                'pip',
                 'siege',
                 'httpd',
                 'haproxy',
@@ -62,3 +61,39 @@ class Benchmark(SimpleBase):
         self.start_services()
 
         filer.template('/var/www/html/index.html')
+
+    def sysbench_oltp(self):
+        data = self.init()
+
+        if data['hosts'][0] == env.host:
+            self.sql('CREATE DATABASE IF NOT EXISTS sysbench;')
+            self.sql("GRANT ALL ON sysbench.* TO sysbench@'localhost' IDENTIFIED BY 'sysbench'")
+
+            run('sysbench --db-driver=mysql --mysql-user=sysbench --mysql-password=sysbench '
+                ' --mysql-socket=/var/lib/mysql/mysql.sock --mysql-db=sysbench --range_size=100 '
+                ' --table_size=10000 --tables=2 --threads=1 --events=0 --time=60 '
+                ' /usr/share/sysbench/oltp_read_write.lua cleanup')
+
+            run('sysbench --db-driver=mysql --mysql-user=sysbench --mysql-password=sysbench '
+                ' --mysql-socket=/var/lib/mysql/mysql.sock --mysql-db=sysbench --range_size=100 '
+                ' --table_size=10000 --tables=2 --threads=1 --events=0 --time=60 '
+                ' /usr/share/sysbench/oltp_read_write.lua prepare')
+
+            # warming up
+            run('sysbench --db-driver=mysql --mysql-user=sysbench --mysql-password=sysbench '
+                ' --mysql-socket=/var/lib/mysql/mysql.sock --mysql-db=sysbench --range_size=100 '
+                ' --table_size=10000 --tables=2 --threads=1 --events=0 --time=60 '
+                ' /usr/share/sysbench/oltp_read_write.lua run')
+
+            result = run(
+                'sysbench --db-driver=mysql --mysql-user=sysbench --mysql-password=sysbench '
+                ' --mysql-socket=/var/lib/mysql/mysql.sock --mysql-db=sysbench --range_size=100 '
+                ' --table_size=10000 --tables=2 --threads=1 --events=0 --time=60 '
+                ' /usr/share/sysbench/oltp_read_write.lua run')
+
+            run('sysbench --db-driver=mysql --mysql-user=sysbench --mysql-password=sysbench '
+                ' --mysql-socket=/var/lib/mysql/mysql.sock --mysql-db=sysbench --range_size=100 '
+                ' --table_size=10000 --tables=2 --threads=1 --events=0 --time=60 '
+                ' /usr/share/sysbench/oltp_read_write.lua cleanup')
+
+            print result

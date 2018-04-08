@@ -1,0 +1,4 @@
+data:
+- {'!!host': benchmark-1.example.com, queries_per_sec: '3735.22', transactions_per_sec: '186.76'}
+name: sysbench_oltp
+type: table

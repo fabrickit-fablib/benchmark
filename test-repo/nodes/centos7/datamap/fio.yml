@@ -1,0 +1,32 @@
+data:
+- '!!host': benchmark-1.example.com
+  randread_4k_qd1_j1: {cpu_ctx: 37493, cpu_sys: 5.583333, cpu_usr: 1.335, read_iops: 624.606257,
+    read_latency: 3358720, write_iops: 0.0, write_latency: 0}
+  randread_4k_qd32_j1: {cpu_ctx: 14001, cpu_sys: 1.603984, cpu_usr: 0.346447, read_iops: 408.134712,
+    read_latency: 204472320, write_iops: 0.0, write_latency: 0}
+  randread_4k_qd32_j8: {cpu_ctx: 1010, cpu_sys: 0.184929, cpu_usr: 0.039985, read_iops: 244.168999,
+    read_latency: 265289728, write_iops: 0.0, write_latency: 0}
+  randread_4k_qd8_j1: {cpu_ctx: 64317, cpu_sys: 7.061314, cpu_usr: 2.421546, read_iops: 1072.361843,
+    read_latency: 106430464, write_iops: 0.0, write_latency: 0}
+  randread_512_qd1_j1: {cpu_ctx: 68875, cpu_sys: 7.018333, cpu_usr: 1.808333, read_iops: 1113.014783,
+    read_latency: 1499136, write_iops: 0.0, write_latency: 0}
+  randread_512k_qd1_j1: {cpu_ctx: 18573, cpu_sys: 4.243767, cpu_usr: 0.198198, read_iops: 309.133606,
+    read_latency: 102236160, write_iops: 0.0, write_latency: 0}
+  randwrite_4k_qd1_j1: {cpu_ctx: 24142, cpu_sys: 3.973333, cpu_usr: 0.715, read_iops: 0.0,
+    read_latency: 0, write_iops: 401.959967, write_latency: 9371648}
+  randwrite_4k_qd32_j1: {cpu_ctx: 3915, cpu_sys: 0.331313, cpu_usr: 0.196457, read_iops: 0.0,
+    read_latency: 0, write_iops: 378.223591, write_latency: 158334976}
+  randwrite_4k_qd32_j8: {cpu_ctx: 1715, cpu_sys: 0.274808, cpu_usr: 0.09993, read_iops: 0.0,
+    read_latency: 0, write_iops: 416.767983, write_latency: 106430464}
+  randwrite_4k_qd8_j1: {cpu_ctx: 101990, cpu_sys: 10.05225, cpu_usr: 3.466121, read_iops: 0.0,
+    read_latency: 0, write_iops: 1698.670483, write_latency: 103284736}
+  randwrite_512_qd1_j1: {cpu_ctx: 187938, cpu_sys: 21.813333, cpu_usr: 1.123333, read_iops: 0.0,
+    read_latency: 0, write_iops: 1575.340411, write_latency: 798720}
+  randwrite_512k_qd1_j1: {cpu_ctx: 15774, cpu_sys: 4.166667, cpu_usr: 0.345, read_iops: 0.0,
+    read_latency: 0, write_iops: 262.0123, write_latency: 102236160}
+  read_1m_qd1_j1: {cpu_ctx: 11817, cpu_sys: 2.906822, cpu_usr: 0.139767, read_iops: 196.252974,
+    read_latency: 103284736, write_iops: 0.0, write_latency: 0}
+  write_1m_qd1_j1: {cpu_ctx: 15159, cpu_sys: 4.348333, cpu_usr: 1.0, read_iops: 0.0,
+    read_latency: 0, write_iops: 251.529141, write_latency: 25034752}
+name: fio
+type: multi-table

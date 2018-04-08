@@ -1,0 +1,5 @@
+data:
+- {'!!host': benchmark-1.example.com, rnd_read_1k: '1819.43', rnd_write_1k: '1835.93',
+  seq_read_1k: '4885.34', seq_write_1k: '4184.24'}
+name: sysbench_memory
+type: table
